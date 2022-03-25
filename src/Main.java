@@ -7,16 +7,17 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());    //카드의 개수
-        int M = Integer.parseInt(br.readLine());    //가까워야 하는 수
-        int[] arr = new int[N]; //카드 배열
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken());    //카드의 개수
+        int M = Integer.parseInt(st.nextToken());    //가까워야 하는 수
+        int[] arr = new int[N]; //카드 배열
+        st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
         int result = search(arr, N, M);
-
+        System.out.println(result);
 
     }
 
