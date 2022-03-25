@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Main2798 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,12 +21,12 @@ public class Main {
 
     }
 
-    private static int search(int[] arr, int N, int M) {
+    static int search(int[] arr, int N, int M) {
         int result = 0;
 
         for (int i = 0; i < N - 2; i++) {
-            for (int j = 0; j < N - 1; j++) {
-                for (int k = 0; k < N; k++) {
+            for (int j = i + 1; j < N - 1; j++) {
+                for (int k = j + 1; k < N; k++) {
                     int sum = arr[i] + arr[j] + arr[k];
 
                     if(M == sum){
