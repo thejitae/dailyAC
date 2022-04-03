@@ -9,7 +9,7 @@ public class Main2920 {
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         //1 2 3 4 5 6 7 8 ascending
         //8 7 6 5 4 3 2 1 descending
-        //그 외 mixex
+        //나머지 mixex
         int[] note = new int[8];
         String result = "";
         for (int i = 0; i < 8; i++) {
