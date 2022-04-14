@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-    //1929 cheat... 다시 풀기 ㅠㅠ
+    //1929 cheat... 다시 풀기 ㅠ
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
