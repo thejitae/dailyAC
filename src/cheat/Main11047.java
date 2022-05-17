@@ -1,9 +1,11 @@
+package cheat;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Main11047 {
     //11047
     public static void main(String[] args) throws IOException {
         //입력 준비
@@ -23,17 +25,25 @@ public class Main {
             coinArr[i] = Integer.parseInt(br.readLine());
         }
 
-        //현재 금액 sum과 필요 동전 개수 cnt
-        int sum = 0;
+//        //현재 금액 sum과 필요 동전 개수 cnt
+//        int sum = 0;
         int cnt = 0;
+//
+//        while (sum < K) { //시간초과
+//            cnt++;
+//            for (int i = N-1; i > 0; i--) {
+//                if (coinArr[i] <= K-sum) {
+//                    sum += coinArr[i];
+//                    break;
+//                }
+//            }
+//        }
+//
 
-        while (sum < K) {
-            cnt++;
-            for (int i = N-1; i > 0; i--) {
-                if (coinArr[i] <= K-sum) {
-                    sum += coinArr[i];
-                    break;
-                }
+        for (int i = N-1; i >= 0; i--) {
+            if (coinArr[i] <= K) {
+                cnt += (K/coinArr[i]);
+                K = K % coinArr[i];
             }
         }
 
