@@ -23,6 +23,6 @@ public class Main11279 {
             }
         }
 
-        System.out.println(sb);
+        System.out.println(sb );
     }
 }
