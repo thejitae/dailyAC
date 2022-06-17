@@ -24,16 +24,15 @@ public class Main25192 {
 
         for (int i = 0; i < N; i++) {
             str = br.readLine();
-            greeting.add(str);
             if (str.equals("ENTER")) {
-                greeting.remove("ENTER");
-                sum += greeting.size();
                 greeting = new HashSet<>();
-            } else {
-                count = greeting.size();
+                continue;
+            }
+            if (!greeting.contains(str)) {
+                greeting.add(str);
+                sum++;
             }
         }
-        sum += count;
 
         System.out.println(sum);
     }
